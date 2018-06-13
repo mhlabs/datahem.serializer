@@ -662,11 +662,11 @@ public final class MPEntityProto {
         getTypeBytes();
 
     /**
-     * <code>optional string client_id = 2;</code>
+     * <code>optional string clientId = 2;</code>
      */
     java.lang.String getClientId();
     /**
-     * <code>optional string client_id = 2;</code>
+     * <code>optional string clientId = 2;</code>
      */
     com.google.protobuf.ByteString
         getClientIdBytes();
@@ -901,10 +901,10 @@ public final class MPEntityProto {
       }
     }
 
-    public static final int CLIENT_ID_FIELD_NUMBER = 2;
+    public static final int CLIENTID_FIELD_NUMBER = 2;
     private volatile java.lang.Object clientId_;
     /**
-     * <code>optional string client_id = 2;</code>
+     * <code>optional string clientId = 2;</code>
      */
     public java.lang.String getClientId() {
       java.lang.Object ref = clientId_;
@@ -919,7 +919,7 @@ public final class MPEntityProto {
       }
     }
     /**
-     * <code>optional string client_id = 2;</code>
+     * <code>optional string clientId = 2;</code>
      */
     public com.google.protobuf.ByteString
         getClientIdBytes() {
@@ -1239,7 +1239,7 @@ public final class MPEntityProto {
       hash = (19 * hash) + getDescriptorForType().hashCode();
       hash = (37 * hash) + TYPE_FIELD_NUMBER;
       hash = (53 * hash) + getType().hashCode();
-      hash = (37 * hash) + CLIENT_ID_FIELD_NUMBER;
+      hash = (37 * hash) + CLIENTID_FIELD_NUMBER;
       hash = (53 * hash) + getClientId().hashCode();
       hash = (37 * hash) + USER_ID_FIELD_NUMBER;
       hash = (53 * hash) + getUserId().hashCode();
@@ -1604,7 +1604,7 @@ public final class MPEntityProto {
 
       private java.lang.Object clientId_ = "";
       /**
-       * <code>optional string client_id = 2;</code>
+       * <code>optional string clientId = 2;</code>
        */
       public java.lang.String getClientId() {
         java.lang.Object ref = clientId_;
@@ -1619,7 +1619,7 @@ public final class MPEntityProto {
         }
       }
       /**
-       * <code>optional string client_id = 2;</code>
+       * <code>optional string clientId = 2;</code>
        */
       public com.google.protobuf.ByteString
           getClientIdBytes() {
@@ -1635,7 +1635,7 @@ public final class MPEntityProto {
         }
       }
       /**
-       * <code>optional string client_id = 2;</code>
+       * <code>optional string clientId = 2;</code>
        */
       public Builder setClientId(
           java.lang.String value) {
@@ -1648,7 +1648,7 @@ public final class MPEntityProto {
         return this;
       }
       /**
-       * <code>optional string client_id = 2;</code>
+       * <code>optional string clientId = 2;</code>
        */
       public Builder clearClientId() {
         
@@ -1657,7 +1657,7 @@ public final class MPEntityProto {
         return this;
       }
       /**
-       * <code>optional string client_id = 2;</code>
+       * <code>optional string clientId = 2;</code>
        */
       public Builder setClientIdBytes(
           com.google.protobuf.ByteString value) {
@@ -2098,15 +2098,15 @@ public final class MPEntityProto {
       "\n$measurement_protocol_entity_v1.proto\022\021" +
       "org.datahem.proto\"I\n\tValEntity\022\024\n\014string" +
       "_value\030\001 \001(\t\022\021\n\tint_value\030\002 \001(\003\022\023\n\013float" +
-      "_value\030\003 \001(\001\"\375\001\n\010MPEntity\022\014\n\004type\030\001 \001(\t\022" +
-      "\021\n\tclient_id\030\002 \001(\t\022\017\n\007user_id\030\003 \001(\t\022\025\n\ru" +
-      "tc_timestamp\030\004 \001(\t\022\024\n\014epoch_millis\030\005 \001(\003" +
-      "\0227\n\006params\030\006 \003(\0132\'.org.datahem.proto.MPE" +
-      "ntity.ParamsEntry\022\014\n\004date\030\007 \001(\t\032K\n\013Param" +
-      "sEntry\022\013\n\003key\030\001 \001(\t\022+\n\005value\030\002 \001(\0132\034.org" +
-      ".datahem.proto.ValEntity:\0028\001B<\n+org.data",
-      "hem.protobuf.measurementprotocol.v1B\rMPE" +
-      "ntityProtob\006proto3"
+      "_value\030\003 \001(\001\"\374\001\n\010MPEntity\022\014\n\004type\030\001 \001(\t\022" +
+      "\020\n\010clientId\030\002 \001(\t\022\017\n\007user_id\030\003 \001(\t\022\025\n\rut" +
+      "c_timestamp\030\004 \001(\t\022\024\n\014epoch_millis\030\005 \001(\003\022" +
+      "7\n\006params\030\006 \003(\0132\'.org.datahem.proto.MPEn" +
+      "tity.ParamsEntry\022\014\n\004date\030\007 \001(\t\032K\n\013Params" +
+      "Entry\022\013\n\003key\030\001 \001(\t\022+\n\005value\030\002 \001(\0132\034.org." +
+      "datahem.proto.ValEntity:\0028\001B<\n+org.datah",
+      "em.protobuf.measurementprotocol.v1B\rMPEn" +
+      "tityProtob\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -8,6 +8,6 @@ option java_outer_classname = "CollectorPayloadEntityProto";
 message CollectorPayloadEntity {
   string payload = 1;
   map<string, string> headers = 2;
-  string epoch_millis = 3;
+  string epochMillis = 3;
   string uuid = 4;
 }

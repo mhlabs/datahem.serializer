@@ -6,17 +6,17 @@ option java_package = "org.datahem.protobuf.measurementprotocol.v1";
 option java_outer_classname = "MPEntityProto";
 
 message ValEntity {
-	string string_value = 1;
-	int64 int_value = 2;
-	double float_value = 3;
+	string stringValue = 1;
+	int64 intValue = 2;
+	double floatValue = 3;
 }
 
 message MPEntity {
   string type = 1;
-  string client_id = 2;
-  string user_id = 3;
-  string utc_timestamp = 4;
-  int64 epoch_millis = 5;
+  string clientId = 2;
+  string userId = 3;
+  string utcTimestamp = 4;
+  int64 epochMillis = 5;
   map<string, ValEntity> params = 6;
   string date = 7;
 }

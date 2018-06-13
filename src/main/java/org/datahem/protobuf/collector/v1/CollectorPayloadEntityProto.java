@@ -63,11 +63,11 @@ public final class CollectorPayloadEntityProto {
         java.lang.String key);
 
     /**
-     * <code>optional string epoch_millis = 3;</code>
+     * <code>optional string epochMillis = 3;</code>
      */
     java.lang.String getEpochMillis();
     /**
-     * <code>optional string epoch_millis = 3;</code>
+     * <code>optional string epochMillis = 3;</code>
      */
     com.google.protobuf.ByteString
         getEpochMillisBytes();
@@ -299,10 +299,10 @@ public final class CollectorPayloadEntityProto {
       return map.get(key);
     }
 
-    public static final int EPOCH_MILLIS_FIELD_NUMBER = 3;
+    public static final int EPOCHMILLIS_FIELD_NUMBER = 3;
     private volatile java.lang.Object epochMillis_;
     /**
-     * <code>optional string epoch_millis = 3;</code>
+     * <code>optional string epochMillis = 3;</code>
      */
     public java.lang.String getEpochMillis() {
       java.lang.Object ref = epochMillis_;
@@ -317,7 +317,7 @@ public final class CollectorPayloadEntityProto {
       }
     }
     /**
-     * <code>optional string epoch_millis = 3;</code>
+     * <code>optional string epochMillis = 3;</code>
      */
     public com.google.protobuf.ByteString
         getEpochMillisBytes() {
@@ -463,7 +463,7 @@ public final class CollectorPayloadEntityProto {
         hash = (37 * hash) + HEADERS_FIELD_NUMBER;
         hash = (53 * hash) + internalGetHeaders().hashCode();
       }
-      hash = (37 * hash) + EPOCH_MILLIS_FIELD_NUMBER;
+      hash = (37 * hash) + EPOCHMILLIS_FIELD_NUMBER;
       hash = (53 * hash) + getEpochMillis().hashCode();
       hash = (37 * hash) + UUID_FIELD_NUMBER;
       hash = (53 * hash) + getUuid().hashCode();
@@ -916,7 +916,7 @@ public final class CollectorPayloadEntityProto {
 
       private java.lang.Object epochMillis_ = "";
       /**
-       * <code>optional string epoch_millis = 3;</code>
+       * <code>optional string epochMillis = 3;</code>
        */
       public java.lang.String getEpochMillis() {
         java.lang.Object ref = epochMillis_;
@@ -931,7 +931,7 @@ public final class CollectorPayloadEntityProto {
         }
       }
       /**
-       * <code>optional string epoch_millis = 3;</code>
+       * <code>optional string epochMillis = 3;</code>
        */
       public com.google.protobuf.ByteString
           getEpochMillisBytes() {
@@ -947,7 +947,7 @@ public final class CollectorPayloadEntityProto {
         }
       }
       /**
-       * <code>optional string epoch_millis = 3;</code>
+       * <code>optional string epochMillis = 3;</code>
        */
       public Builder setEpochMillis(
           java.lang.String value) {
@@ -960,7 +960,7 @@ public final class CollectorPayloadEntityProto {
         return this;
       }
       /**
-       * <code>optional string epoch_millis = 3;</code>
+       * <code>optional string epochMillis = 3;</code>
        */
       public Builder clearEpochMillis() {
         
@@ -969,7 +969,7 @@ public final class CollectorPayloadEntityProto {
         return this;
       }
       /**
-       * <code>optional string epoch_millis = 3;</code>
+       * <code>optional string epochMillis = 3;</code>
        */
       public Builder setEpochMillisBytes(
           com.google.protobuf.ByteString value) {
@@ -1120,14 +1120,14 @@ public final class CollectorPayloadEntityProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\032collector_payload_v1.proto\022\021org.datahe" +
-      "m.proto\"\306\001\n\026CollectorPayloadEntity\022\017\n\007pa" +
+      "m.proto\"\305\001\n\026CollectorPayloadEntity\022\017\n\007pa" +
       "yload\030\001 \001(\t\022G\n\007headers\030\002 \003(\01326.org.datah" +
       "em.proto.CollectorPayloadEntity.HeadersE" +
-      "ntry\022\024\n\014epoch_millis\030\003 \001(\t\022\014\n\004uuid\030\004 \001(\t" +
-      "\032.\n\014HeadersEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002" +
-      " \001(\t:\0028\001B@\n!org.datahem.protobuf.collect" +
-      "or.v1B\033CollectorPayloadEntityProtob\006prot" +
-      "o3"
+      "ntry\022\023\n\013epochMillis\030\003 \001(\t\022\014\n\004uuid\030\004 \001(\t\032" +
+      ".\n\014HeadersEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 " +
+      "\001(\t:\0028\001B@\n!org.datahem.protobuf.collecto" +
+      "r.v1B\033CollectorPayloadEntityProtob\006proto" +
+      "3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

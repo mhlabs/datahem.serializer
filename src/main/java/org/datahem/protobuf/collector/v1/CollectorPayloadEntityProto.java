@@ -19,11 +19,15 @@ public final class CollectorPayloadEntityProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional string payload = 1;</code>
+     * <code>required string payload = 1;</code>
+     */
+    boolean hasPayload();
+    /**
+     * <code>required string payload = 1;</code>
      */
     java.lang.String getPayload();
     /**
-     * <code>optional string payload = 1;</code>
+     * <code>required string payload = 1;</code>
      */
     com.google.protobuf.ByteString
         getPayloadBytes();
@@ -65,6 +69,10 @@ public final class CollectorPayloadEntityProto {
     /**
      * <code>optional string epochMillis = 3;</code>
      */
+    boolean hasEpochMillis();
+    /**
+     * <code>optional string epochMillis = 3;</code>
+     */
     java.lang.String getEpochMillis();
     /**
      * <code>optional string epochMillis = 3;</code>
@@ -72,6 +80,10 @@ public final class CollectorPayloadEntityProto {
     com.google.protobuf.ByteString
         getEpochMillisBytes();
 
+    /**
+     * <code>optional string uuid = 4;</code>
+     */
+    boolean hasUuid();
     /**
      * <code>optional string uuid = 4;</code>
      */
@@ -102,7 +114,7 @@ public final class CollectorPayloadEntityProto {
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private CollectorPayloadEntity(
         com.google.protobuf.CodedInputStream input,
@@ -110,6 +122,8 @@ public final class CollectorPayloadEntityProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -119,15 +133,16 @@ public final class CollectorPayloadEntityProto {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
                 done = true;
               }
               break;
             }
             case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              payload_ = s;
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              payload_ = bs;
               break;
             }
             case 18: {
@@ -143,15 +158,15 @@ public final class CollectorPayloadEntityProto {
               break;
             }
             case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              epochMillis_ = s;
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              epochMillis_ = bs;
               break;
             }
             case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              uuid_ = s;
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000004;
+              uuid_ = bs;
               break;
             }
           }
@@ -162,6 +177,7 @@ public final class CollectorPayloadEntityProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -192,7 +208,13 @@ public final class CollectorPayloadEntityProto {
     public static final int PAYLOAD_FIELD_NUMBER = 1;
     private volatile java.lang.Object payload_;
     /**
-     * <code>optional string payload = 1;</code>
+     * <code>required string payload = 1;</code>
+     */
+    public boolean hasPayload() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required string payload = 1;</code>
      */
     public java.lang.String getPayload() {
       java.lang.Object ref = payload_;
@@ -202,12 +224,14 @@ public final class CollectorPayloadEntityProto {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        payload_ = s;
+        if (bs.isValidUtf8()) {
+          payload_ = s;
+        }
         return s;
       }
     }
     /**
-     * <code>optional string payload = 1;</code>
+     * <code>required string payload = 1;</code>
      */
     public com.google.protobuf.ByteString
         getPayloadBytes() {
@@ -304,6 +328,12 @@ public final class CollectorPayloadEntityProto {
     /**
      * <code>optional string epochMillis = 3;</code>
      */
+    public boolean hasEpochMillis() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional string epochMillis = 3;</code>
+     */
     public java.lang.String getEpochMillis() {
       java.lang.Object ref = epochMillis_;
       if (ref instanceof java.lang.String) {
@@ -312,7 +342,9 @@ public final class CollectorPayloadEntityProto {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        epochMillis_ = s;
+        if (bs.isValidUtf8()) {
+          epochMillis_ = s;
+        }
         return s;
       }
     }
@@ -338,6 +370,12 @@ public final class CollectorPayloadEntityProto {
     /**
      * <code>optional string uuid = 4;</code>
      */
+    public boolean hasUuid() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional string uuid = 4;</code>
+     */
     public java.lang.String getUuid() {
       java.lang.Object ref = uuid_;
       if (ref instanceof java.lang.String) {
@@ -346,7 +384,9 @@ public final class CollectorPayloadEntityProto {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        uuid_ = s;
+        if (bs.isValidUtf8()) {
+          uuid_ = s;
+        }
         return s;
       }
     }
@@ -373,13 +413,17 @@ public final class CollectorPayloadEntityProto {
       if (isInitialized == 1) return true;
       if (isInitialized == 0) return false;
 
+      if (!hasPayload()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
       memoizedIsInitialized = 1;
       return true;
     }
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getPayloadBytes().isEmpty()) {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, payload_);
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
@@ -391,12 +435,13 @@ public final class CollectorPayloadEntityProto {
             .build();
         output.writeMessage(2, headers);
       }
-      if (!getEpochMillisBytes().isEmpty()) {
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, epochMillis_);
       }
-      if (!getUuidBytes().isEmpty()) {
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, uuid_);
       }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -404,7 +449,7 @@ public final class CollectorPayloadEntityProto {
       if (size != -1) return size;
 
       size = 0;
-      if (!getPayloadBytes().isEmpty()) {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, payload_);
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
@@ -417,12 +462,13 @@ public final class CollectorPayloadEntityProto {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(2, headers);
       }
-      if (!getEpochMillisBytes().isEmpty()) {
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, epochMillis_);
       }
-      if (!getUuidBytes().isEmpty()) {
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, uuid_);
       }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -439,14 +485,24 @@ public final class CollectorPayloadEntityProto {
       org.datahem.protobuf.collector.v1.CollectorPayloadEntityProto.CollectorPayloadEntity other = (org.datahem.protobuf.collector.v1.CollectorPayloadEntityProto.CollectorPayloadEntity) obj;
 
       boolean result = true;
-      result = result && getPayload()
-          .equals(other.getPayload());
+      result = result && (hasPayload() == other.hasPayload());
+      if (hasPayload()) {
+        result = result && getPayload()
+            .equals(other.getPayload());
+      }
       result = result && internalGetHeaders().equals(
           other.internalGetHeaders());
-      result = result && getEpochMillis()
-          .equals(other.getEpochMillis());
-      result = result && getUuid()
-          .equals(other.getUuid());
+      result = result && (hasEpochMillis() == other.hasEpochMillis());
+      if (hasEpochMillis()) {
+        result = result && getEpochMillis()
+            .equals(other.getEpochMillis());
+      }
+      result = result && (hasUuid() == other.hasUuid());
+      if (hasUuid()) {
+        result = result && getUuid()
+            .equals(other.getUuid());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -457,16 +513,22 @@ public final class CollectorPayloadEntityProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptorForType().hashCode();
-      hash = (37 * hash) + PAYLOAD_FIELD_NUMBER;
-      hash = (53 * hash) + getPayload().hashCode();
+      if (hasPayload()) {
+        hash = (37 * hash) + PAYLOAD_FIELD_NUMBER;
+        hash = (53 * hash) + getPayload().hashCode();
+      }
       if (!internalGetHeaders().getMap().isEmpty()) {
         hash = (37 * hash) + HEADERS_FIELD_NUMBER;
         hash = (53 * hash) + internalGetHeaders().hashCode();
       }
-      hash = (37 * hash) + EPOCHMILLIS_FIELD_NUMBER;
-      hash = (53 * hash) + getEpochMillis().hashCode();
-      hash = (37 * hash) + UUID_FIELD_NUMBER;
-      hash = (53 * hash) + getUuid().hashCode();
+      if (hasEpochMillis()) {
+        hash = (37 * hash) + EPOCHMILLIS_FIELD_NUMBER;
+        hash = (53 * hash) + getEpochMillis().hashCode();
+      }
+      if (hasUuid()) {
+        hash = (37 * hash) + UUID_FIELD_NUMBER;
+        hash = (53 * hash) + getUuid().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -608,12 +670,12 @@ public final class CollectorPayloadEntityProto {
       public Builder clear() {
         super.clear();
         payload_ = "";
-
+        bitField0_ = (bitField0_ & ~0x00000001);
         internalGetMutableHeaders().clear();
         epochMillis_ = "";
-
+        bitField0_ = (bitField0_ & ~0x00000004);
         uuid_ = "";
-
+        bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
 
@@ -638,10 +700,19 @@ public final class CollectorPayloadEntityProto {
         org.datahem.protobuf.collector.v1.CollectorPayloadEntityProto.CollectorPayloadEntity result = new org.datahem.protobuf.collector.v1.CollectorPayloadEntityProto.CollectorPayloadEntity(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
         result.payload_ = payload_;
         result.headers_ = internalGetHeaders();
         result.headers_.makeImmutable();
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000002;
+        }
         result.epochMillis_ = epochMillis_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000004;
+        }
         result.uuid_ = uuid_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -685,25 +756,32 @@ public final class CollectorPayloadEntityProto {
 
       public Builder mergeFrom(org.datahem.protobuf.collector.v1.CollectorPayloadEntityProto.CollectorPayloadEntity other) {
         if (other == org.datahem.protobuf.collector.v1.CollectorPayloadEntityProto.CollectorPayloadEntity.getDefaultInstance()) return this;
-        if (!other.getPayload().isEmpty()) {
+        if (other.hasPayload()) {
+          bitField0_ |= 0x00000001;
           payload_ = other.payload_;
           onChanged();
         }
         internalGetMutableHeaders().mergeFrom(
             other.internalGetHeaders());
-        if (!other.getEpochMillis().isEmpty()) {
+        if (other.hasEpochMillis()) {
+          bitField0_ |= 0x00000004;
           epochMillis_ = other.epochMillis_;
           onChanged();
         }
-        if (!other.getUuid().isEmpty()) {
+        if (other.hasUuid()) {
+          bitField0_ |= 0x00000008;
           uuid_ = other.uuid_;
           onChanged();
         }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
 
       public final boolean isInitialized() {
+        if (!hasPayload()) {
+          return false;
+        }
         return true;
       }
 
@@ -728,7 +806,13 @@ public final class CollectorPayloadEntityProto {
 
       private java.lang.Object payload_ = "";
       /**
-       * <code>optional string payload = 1;</code>
+       * <code>required string payload = 1;</code>
+       */
+      public boolean hasPayload() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required string payload = 1;</code>
        */
       public java.lang.String getPayload() {
         java.lang.Object ref = payload_;
@@ -736,14 +820,16 @@ public final class CollectorPayloadEntityProto {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          payload_ = s;
+          if (bs.isValidUtf8()) {
+            payload_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>optional string payload = 1;</code>
+       * <code>required string payload = 1;</code>
        */
       public com.google.protobuf.ByteString
           getPayloadBytes() {
@@ -759,37 +845,36 @@ public final class CollectorPayloadEntityProto {
         }
       }
       /**
-       * <code>optional string payload = 1;</code>
+       * <code>required string payload = 1;</code>
        */
       public Builder setPayload(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  bitField0_ |= 0x00000001;
         payload_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional string payload = 1;</code>
+       * <code>required string payload = 1;</code>
        */
       public Builder clearPayload() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         payload_ = getDefaultInstance().getPayload();
         onChanged();
         return this;
       }
       /**
-       * <code>optional string payload = 1;</code>
+       * <code>required string payload = 1;</code>
        */
       public Builder setPayloadBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  bitField0_ |= 0x00000001;
         payload_ = value;
         onChanged();
         return this;
@@ -918,13 +1003,21 @@ public final class CollectorPayloadEntityProto {
       /**
        * <code>optional string epochMillis = 3;</code>
        */
+      public boolean hasEpochMillis() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional string epochMillis = 3;</code>
+       */
       public java.lang.String getEpochMillis() {
         java.lang.Object ref = epochMillis_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          epochMillis_ = s;
+          if (bs.isValidUtf8()) {
+            epochMillis_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -954,7 +1047,7 @@ public final class CollectorPayloadEntityProto {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  bitField0_ |= 0x00000004;
         epochMillis_ = value;
         onChanged();
         return this;
@@ -963,7 +1056,7 @@ public final class CollectorPayloadEntityProto {
        * <code>optional string epochMillis = 3;</code>
        */
       public Builder clearEpochMillis() {
-        
+        bitField0_ = (bitField0_ & ~0x00000004);
         epochMillis_ = getDefaultInstance().getEpochMillis();
         onChanged();
         return this;
@@ -976,8 +1069,7 @@ public final class CollectorPayloadEntityProto {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  bitField0_ |= 0x00000004;
         epochMillis_ = value;
         onChanged();
         return this;
@@ -987,13 +1079,21 @@ public final class CollectorPayloadEntityProto {
       /**
        * <code>optional string uuid = 4;</code>
        */
+      public boolean hasUuid() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional string uuid = 4;</code>
+       */
       public java.lang.String getUuid() {
         java.lang.Object ref = uuid_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          uuid_ = s;
+          if (bs.isValidUtf8()) {
+            uuid_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -1023,7 +1123,7 @@ public final class CollectorPayloadEntityProto {
         if (value == null) {
     throw new NullPointerException();
   }
-  
+  bitField0_ |= 0x00000008;
         uuid_ = value;
         onChanged();
         return this;
@@ -1032,7 +1132,7 @@ public final class CollectorPayloadEntityProto {
        * <code>optional string uuid = 4;</code>
        */
       public Builder clearUuid() {
-        
+        bitField0_ = (bitField0_ & ~0x00000008);
         uuid_ = getDefaultInstance().getUuid();
         onChanged();
         return this;
@@ -1045,20 +1145,19 @@ public final class CollectorPayloadEntityProto {
         if (value == null) {
     throw new NullPointerException();
   }
-  checkByteStringIsUtf8(value);
-        
+  bitField0_ |= 0x00000008;
         uuid_ = value;
         onChanged();
         return this;
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFields(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -1075,7 +1174,7 @@ public final class CollectorPayloadEntityProto {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<CollectorPayloadEntity>
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CollectorPayloadEntity>
         PARSER = new com.google.protobuf.AbstractParser<CollectorPayloadEntity>() {
       public CollectorPayloadEntity parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
@@ -1121,13 +1220,12 @@ public final class CollectorPayloadEntityProto {
     java.lang.String[] descriptorData = {
       "\n\032collector_payload_v1.proto\022\021org.datahe" +
       "m.proto\"\305\001\n\026CollectorPayloadEntity\022\017\n\007pa" +
-      "yload\030\001 \001(\t\022G\n\007headers\030\002 \003(\01326.org.datah" +
+      "yload\030\001 \002(\t\022G\n\007headers\030\002 \003(\01326.org.datah" +
       "em.proto.CollectorPayloadEntity.HeadersE" +
       "ntry\022\023\n\013epochMillis\030\003 \001(\t\022\014\n\004uuid\030\004 \001(\t\032" +
       ".\n\014HeadersEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 " +
       "\001(\t:\0028\001B@\n!org.datahem.protobuf.collecto" +
-      "r.v1B\033CollectorPayloadEntityProtob\006proto" +
-      "3"
+      "r.v1B\033CollectorPayloadEntityProto"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

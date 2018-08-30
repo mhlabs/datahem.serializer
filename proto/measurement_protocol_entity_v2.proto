@@ -1,0 +1,22 @@
+syntax = "proto2";
+
+package org.datahem.proto.v2;
+
+option java_package = "org.datahem.protobuf.measurementprotocol.v1";
+option java_outer_classname = "MPEntityProto";
+
+message ValEntity {
+	optional string stringValue = 1;
+	optional int64 intValue = 2;
+	optional double floatValue = 3;
+}
+
+message MPEntity {
+  required string type = 1;
+  required string clientId = 2;
+  optional string userId = 3;
+  required string utcTimestamp = 4;
+  required int64 epochMillis = 5;
+  map<string, ValEntity> params = 6;
+  required string date = 7;
+}

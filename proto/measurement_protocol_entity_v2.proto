@@ -16,7 +16,7 @@ message MPEntity {
   string hitId = 2;
   string clientId = 3;
   string userId = 4;
-  string localTimestamp = 5;
+  string localDateTime = 5;
   int64 epochMillis = 6;
   map<string, ValEntity> params = 7;
   string date = 8;
